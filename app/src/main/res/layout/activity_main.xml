@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.proton.view.EcgRealTimeView
+        android:id="@+id/id_ecg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/idScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="scan"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="conn"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="disconnect"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idRemoteResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remoteRes"
+        android:textAllCaps="false" />
+
+</LinearLayout>
