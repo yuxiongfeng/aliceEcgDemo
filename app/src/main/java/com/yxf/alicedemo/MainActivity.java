@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String hardVersion;
     private IEcgAlgorithm algorithm;
     //这里的appId只是临时的
-    private String appId = "5407dafeec67d620";
+    private String appId = "10167ae33846fd79";
 
     private long measureStartTime = -1;
     private long measureEndTime = -1;
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void receiveEcgRawData(byte[] data) {
                 super.receiveEcgRawData(data);
                 realTimeView.addEcgData(data);
-                if (measureStartTime != -1) {
+                if (measureStartTime == -1) {
                     measureStartTime = System.currentTimeMillis();
                 }
             }
