@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private long measureStartTime = -1;
     private long measureEndTime = -1;
-    private int status=0;//0:未连接  1：连接中 2：已连接  3：连接断开
+    private int status = 0;//0:未连接  1：连接中 2：已连接  3：连接断开
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,13 +124,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onConnectSuccess() {
                 super.onConnectSuccess();
                 Logger.w("onConnectSuccess...");
+                status = 2;
             }
 
             @Override
             public void onConnectSuccess(ScanResult scanResult) {
                 super.onConnectSuccess(scanResult);
                 Logger.w("onConnectSuccess...");
-                status=2;
+                status = 2;
             }
 
             @Override
@@ -157,11 +158,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void disconnect() {
         EcgCardManager.getInstance(card_mac).disConnect();
-        status=3;
+        status = 3;
     }
 
     private void fetchRemoteResult() {
-        if (status!=2) {
+        if (status != 2) {
             Toast.makeText(this, "已断开连接，心电数据已被清空", Toast.LENGTH_SHORT).show();
             return;
         }
