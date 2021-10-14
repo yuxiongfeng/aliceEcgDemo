@@ -26,6 +26,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -35,8 +41,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.proton:protonecg:1.2.1'
-    implementation 'com.github.yuxiongfeng:ecgConnector:v1.0.9-alpha01'
-    implementation 'com.github.yuxiongfeng:ecgAlgorithm:v1.1.2-alpha04'
+    implementation 'com.proton.ecg:ecg-algorithm:V1.0.8'
+    implementation 'com.proton.ecg.card:cardble:V1.0.3'
+    implementation 'com.proton.ecg.patch:patchble:V1.0.3'
     implementation 'com.orhanobut:logger:2.2.0'
+    implementation 'com.proton:protonecg:1.2.1'
 }

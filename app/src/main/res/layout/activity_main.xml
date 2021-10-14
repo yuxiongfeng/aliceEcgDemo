@@ -11,35 +11,56 @@
         android:id="@+id/id_ecg_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1" />
 
     <Button
-        android:id="@+id/idScan"
+        android:id="@+id/idScanCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="scan"
+        android:text="扫描心电卡"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/idConnect"
+        android:id="@+id/idScanPatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="conn"
+        android:text="扫描心电贴"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/idDisconnect"
+        android:id="@+id/idConnectCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="disconnect"
+        android:text="连接心电卡"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idConnectPatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接心电贴"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idDisconnectCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="断开心电卡"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idDisconnectPatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="断开心电贴"
+        android:textAllCaps="false" />
+
 
     <Button
         android:id="@+id/idRemoteResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="remoteRes"
+        android:text="获取远程算法结果"
         android:textAllCaps="false" />
 
 </LinearLayout>

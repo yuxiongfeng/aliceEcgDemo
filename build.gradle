@@ -5,7 +5,6 @@ ext {
             targetSdkVersion : 29,
             minSdkVersion    : 19,
             buildToolsVersion: '30.0.3',
-            logProguard      : '/Users/wangmengsi/Desktop/log.pro'
     ]
 }
 buildscript {
@@ -15,7 +14,6 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.2"
-
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -26,8 +24,21 @@ allprojects {
         google()
         jcenter()
         maven {
-            url "https://jitpack.io"
-            credentials { username authToken }
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            credentials {
+                username '615c06589b9269d050df5031'
+                password 'vvXz(WrhTohf'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2143987-release-TP0WJq/'
+        }
+        maven {
+            credentials {
+                username '615c06589b9269d050df5031'
+                password 'vvXz(WrhTohf'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2143987-snapshot-k3BKoO/'
         }
     }
 }
